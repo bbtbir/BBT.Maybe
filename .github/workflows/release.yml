@@ -56,5 +56,5 @@ jobs:
 
       - name: Publish NuGet
         run: |
-          nuget push ./*.nupkg -Source 'https://api.nuget.org/v3/index.json' -ApiKey ${{secrets.NUGETORG}}
           nuget push ./*.nupkg --source "github"
+          nuget push ./*.nupkg -Source 'https://api.nuget.org/v3/index.json' -ApiKey ${{secrets.NUGETORG}}          
